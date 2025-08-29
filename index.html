@@ -9,6 +9,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-spinner">
+            <div class="spinner"></div>
+            <p>Loading...</p>
+        </div>
+    </div>
+    
+    <a href="#home" class="skip-link">Skip to content</a>
+    
+    <!-- Progress Bar -->
+    <div class="progress-bar" id="progressBar"></div>
+    
     <!-- Animated Background Elements -->
     <div class="animated-bg">
         <div class="floating-particles">
@@ -97,14 +110,15 @@
     </div>
 
     <!-- Navigation -->
-    <nav class="navbar">
+    <header>
+    <nav class="navbar" role="navigation" aria-label="Primary">
         <div class="nav-container">
             <div class="nav-logo">
                 <a href="#home">Portfolio</a>
             </div>
             <ul class="nav-menu">
                 <li class="nav-item">
-                    <a href="#home" class="nav-link">Home</a>
+                    <a href="" class="nav-link">Home</a>
                 </li>
                 <li class="nav-item">
                     <a href="#about" class="nav-link">About</a>
@@ -119,6 +133,9 @@
                     <a href="#contact" class="nav-link">Contact</a>
                 </li>
             </ul>
+            <button class="theme-toggle" aria-label="Toggle dark mode" aria-pressed="false">
+                <i class="fas fa-moon"></i>
+            </button>
             <div class="hamburger">
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -126,14 +143,14 @@
             </div>
         </div>
     </nav>
+    </header>
 
+    <main id="main-content">
     <!-- Hero Section -->
-    <section id="home" class="hero">
+    <section id="home" class="hero" aria-labelledby="home-title">
         <div class="hero-container">
             <div class="hero-content">
-                <h1 class="hero-title">
-                    <h1>Hi, I'm <span class="highlight">DURKESH A</span></h1>
-                </h1>
+                <h1 id="home-title" class="hero-title">Hi, I'm <span class="highlight">DURKESH A</span></h1>
                 <h2 class="hero-subtitle">Full Stack Web Developer</h2>
                 <p class="hero-description">
                     I create beautiful, functional, and scalable web applications that solve real-world problems.
@@ -155,7 +172,7 @@
             </div>
             <div class="hero-image">
                 <div class="hero-avatar">
-                    <img src="WhatsApp_Image_2025-08-29_at_11.17.49_AM-removebg-preview.png" alt="DURKESH A - Full Stack Developer" class="profile-photo">
+                    <img src="WIN_20250829_18_23_58_Pro-removebg-preview.png" alt="DURKESH A - Full Stack Developer" class="profile-photo">
                 </div>
             </div>
         </div>
@@ -173,9 +190,9 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about">
+    <section id="about" class="about" aria-labelledby="about-title">
         <div class="container">
-            <h2 class="section-title">About Me</h2>
+            <h2 id="about-title" class="section-title">About Me</h2>
             <div class="about-content">
                 <div class="about-text">
                     <p>
@@ -197,12 +214,6 @@
                             <h3>3+</h3>
                             <p>Projects Completed</p>
                         </div>
-                       
-                    </div>
-                </div>
-                <div class="about-image">
-                    <div class="about-avatar">
-                        <i class="fas fa-user-tie"></i>
                     </div>
                 </div>
             </div>
@@ -210,9 +221,11 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="skills">
+    <section id="skills" class="skills" aria-labelledby="skills-title">
         <div class="container">
-            <h2 class="section-title">Skills & Technologies</h2>
+            <h2 id="skills-title" class="section-title">Skills & Technologies</h2>
+            <div class="skills-stars" aria-hidden="true"></div>
+            <div class="skills-fly-stars" aria-hidden="true"></div>
             <div class="skills-grid">
                 <div class="skill-category">
                     <h3>Frontend</h3>
@@ -294,9 +307,9 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="projects">
+    <section id="projects" class="projects" aria-labelledby="projects-title">
         <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
+            <h2 id="projects-title" class="section-title">Featured Projects</h2>
             <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-image">
@@ -357,40 +370,31 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact">
+    <section id="contact" class="contact" aria-labelledby="contact-title">
         <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3>Let's work together!</h3>
-                    <p>I'm always interested in new opportunities and exciting projects. Whether you have a question or just want to say hi, feel free to reach out!</p>
-                    <div class="contact-methods">
-                        <div class="contact-method">
-                            <i class="fas fa-envelope"></i>
-                            <span>Durkesh369@gmail.com</span>
-                        </div>
-                        <div class="contact-method">
-                            <i class="fas fa-phone"></i>
-                            <span>+91 8610752189</span>
-                        </div>
-                        <div class="contact-method">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span> Salem Tamil Nadu , India</span>
-                        </div>
+            <h2 id="contact-title" class="section-title">Get In Touch</h2>
+            <div class="contact-grid">
+                <div class="contact-card contact-cta">
+                    <h3>Let's build something great</h3>
+                    <p>I'm open to freelance work, full-time roles, and interesting collaborations. Reach out and I'll respond within 24 hours.</p>
+                    <div class="contact-actions">
+                        <a class="contact-action" href="mailto:Durkesh369@gmail.com"><i class="fas fa-envelope"></i> Durkesh369@gmail.com</a>
+                        <a class="contact-action" href="tel:+918610752189"><i class="fas fa-phone"></i> +91 8610752189</a>
+                        <div class="contact-action"><i class="fas fa-map-marker-alt"></i> Salem, Tamil Nadu, India</div>
                     </div>
-  
                 </div>
+            </div>
         </div>
     </section>
+    </main>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
         <div class="container">
-            <p>&copy; 2024 Your Name. All rights reserved.</p>
+            <p>&copy; 2024 DURKESH A. All rights reserved.</p>
         </div>
     </footer>
 
     <script src="script.js"></script>
 </body>
 </html>
-
