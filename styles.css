@@ -561,7 +561,7 @@ body.theme-dark .hero {
 .hero-avatar {
     width: 300px;
     height: 300px;
-    background: rgba(142, 21, 144, 0.501);
+    background: rgba(243, 243, 243, 0.956);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -569,7 +569,7 @@ body.theme-dark .hero {
     font-size: 8rem;
     color: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(10px);
-    border: 5px solid rgba(0, 0, 0, 0.953);
+    border: 5px solid rgba(255, 255, 255, 0.953);
     animation: avatarFloat 8s ease-in-out infinite;
     position: relative;
     overflow: hidden;
@@ -580,9 +580,9 @@ body.theme-dark .hero {
     height: 100%;
     object-fit: cover;
     border-radius: 50%;
-    border: 5px solid #ffe6e6;
+    border: 5px solid #000000;
     box-shadow: 0 10px 30px rgba(0,0,0,0.25);
-    background: linear-gradient(to right, rgba(176, 166, 166, 0.5), rgba(167, 124, 213, 0.5));
+    background: linear-gradient(to right, rgb(255, 254, 254), rgba(255, 254, 255, 0.618));
 }
 
 .hero-avatar::before {
@@ -2221,4 +2221,5 @@ body.theme-dark .footer { background: #0b1220; }
         opacity: 0;
     }
 }
+
 
